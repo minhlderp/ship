@@ -17,6 +17,12 @@ class ShipPricelist(models.Model):
     over_weight_fee = fields.Float(string=_('Over Weight Fee'), digits='Product Unit of Measure')
     line_ids = fields.One2many('ship.pricelist.line', 'ship_pricelist_id', string=_('Pricelist Lines'))
     active = fields.Boolean(string=_('Active'), default=True)
+    has_vat = fields.Boolean('VAT')
+    number_vat = fields.Float('VAT')
+    collection = fields.Boolean(related='service_type_id.price_list', string='Price list collection')
+    surcharge_ids = fields.One2many('surcharge', 'ship_pricelist_id', string='Surcharge')
+    fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection')
+
 
     @api.constrains('line_ids')
     def validate_range_from_to_weight(self):

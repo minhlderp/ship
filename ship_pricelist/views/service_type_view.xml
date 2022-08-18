@@ -8,6 +8,7 @@
                 <tree string="Service Type" editable="bottom">
                     <field name="name"/>
                     <field name="active"/>
+                    <field name="price_list"/>
                 </tree>
             </field>
         </record>
