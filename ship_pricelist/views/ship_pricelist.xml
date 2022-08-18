@@ -41,33 +41,55 @@
                             <group>
                                 <field name="year_apply"/>
                                 <field name="to_locations" widget="many2many_tags"/>
+                                <field name="collection" invisible="1"/>
+                                <field name="has_vat"/>
+                                <field name="number_vat" attrs="{'invisible' : [('has_vat', '!=', True)]}" string="VAT (%)"/>
                             </group>
                         </group>
                         <group>
                             <group>
-                                <field name="fuel_fee" widget="percentage"/>
-                                <field name="region_fee" widget="percentage"/>
+                                <field name="fuel_fee" string="Phí xăng dầu (%)"/>
+                                <field name="region_fee" string="Phí vùng sâu (%)"/>
                             </group>
                         </group>
                         <notebook>
-                            <page name="pricelist_line" string="Ship Pricelist Lines">
+                            <page  name="pricelist_line" string="Ship Pricelist Lines" attrs="{'invisible' : [('collection', '!=', True)]}">
                                 <field name="line_ids">
-                                    <tree editable="bottom">
+                                    <tree editable="bottom" default_order="from_weight">
                                         <field name="name" required="1"/>
                                         <field name="from_weight" />
-                                        <field name="to_weight" />
+                                        <field name="to_weight"/>
+                                        <field name="progressive" string="Lũy tiến"/>
+                                        <field name="progressive_level" string="Mức tính lũy tiến(Gr)"/>
                                         <field name="fee" />
                                     </tree>
                                 </field>
                             </page>
                         </notebook>
-
-                        <group>
-                            <group>
-                                <field name="over_weight"/>
-                                <field name="over_weight_fee"/>
-                            </group>
-                        </group>
+                        <notebook>
+                            <page  name="surcharge_line" string="Phụ phí" attrs="{'invisible' : [('collection', '!=', True)]}">
+                                <field name="surcharge_ids">
+                                    <tree editable="bottom" default_order="price">
+                                        <field name="type_surcharge" required="1" string="Loại phí"/>
+                                        <field name="price" string="Số tiền"/>
+                                        <field name="cpn" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page  name="fees_collection_line" string="Giá cước thu hộ" attrs="{'invisible' : [('collection', '!=', False)]}">
+                                <field name="fees_collection_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1" string="Mức"/>
+                                        <field name="from_weight" string="Giá trị hàng từ (Gr)"/>
+                                        <field name="to_weight" string="Đến (Gr)"/>
+                                        <field name="fee_money" attrs="{'readonly': [('percentage_fee', '!=', 0)]}" string="Cước theo số tiền"/>
+                                        <field name="percentage_fee" attrs="{'readonly': [('fee_money', '!=', 0)]}" string="Cước theo %"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
                     </sheet>
                 </form>
             </field>
@@ -80,7 +102,15 @@
             <field name="view_mode">tree,form</field>
         </record>
 
+        <record id="year_apply_action_id" model="ir.actions.act_window">
+            <field name="name">Year apply</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">year.apply</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+
         <menuitem name="Ship Pricelist" id="ship_pricelist_menu_id" parent="sale.menu_sale_config" action="ship_pricelist_action_id"/>
+        <menuitem name="Year apply" id="year_apply_menu_id" parent="sale.menu_sale_config" action="year_apply_action_id" groups="base.group_system"/>
 
     </data>
 </odoo>

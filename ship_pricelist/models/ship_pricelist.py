@@ -1,6 +1,6 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
-
+from datetime import datetime, date
 
 class ShipPricelist(models.Model):
     _name = 'ship.pricelist'
@@ -12,11 +12,17 @@ class ShipPricelist(models.Model):
     to_locations = fields.Many2many('res.country.state', string=_('To Locations'), required=1)
     fuel_fee = fields.Float(string=_('Fuel Fee'), digits='Product Unit of Measure')
     region_fee = fields.Float(string=_('Region Fee'), digits='Product Unit of Measure')
-    year_apply = fields.Char(string=_('Year apply'))
+    year_apply = fields.Many2one('year.apply', string=_('Year apply'))
     over_weight = fields.Float(string=_('Over Weight (Gr)'), digits='Product Unit of Measure')
     over_weight_fee = fields.Float(string=_('Over Weight Fee'), digits='Product Unit of Measure')
     line_ids = fields.One2many('ship.pricelist.line', 'ship_pricelist_id', string=_('Pricelist Lines'))
     active = fields.Boolean(string=_('Active'), default=True)
+    has_vat = fields.Boolean('VAT')
+    number_vat = fields.Float('VAT')
+    collection = fields.Boolean(related='service_type_id.price_list', string='Price list collection')
+    surcharge_ids = fields.One2many('surcharge', 'ship_pricelist_id', string='Surcharge')
+    fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection')
+
 
     @api.constrains('line_ids')
     def validate_range_from_to_weight(self):
