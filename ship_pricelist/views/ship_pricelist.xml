@@ -43,7 +43,11 @@
                                 <field name="to_locations" widget="many2many_tags"/>
                                 <field name="collection" invisible="1"/>
                                 <field name="has_vat"/>
+<<<<<<< HEAD
                                 <field name="number_vat" attrs="{'invisible' : [('has_vat', '!=', True)]}" string="VAT (%)"/>
+=======
+                                <field name="number_vat" attrs="{'invisible' : [('has_vat', '!=', True)]}"/>
+>>>>>>> 131a8e3bf586708491630fa78f85c10c67411111
                             </group>
                         </group>
                         <group>
@@ -56,12 +60,45 @@
                             <page  name="pricelist_line" string="Ship Pricelist Lines" attrs="{'invisible' : [('collection', '!=', True)]}">
                                 <field name="line_ids">
                                     <tree editable="bottom" default_order="from_weight">
+<<<<<<< HEAD
                                         <field name="name" required="1"/>
                                         <field name="from_weight" />
                                         <field name="to_weight"/>
                                         <field name="progressive" string="Lũy tiến"/>
                                         <field name="progressive_level" string="Mức tính lũy tiến(Gr)"/>
                                         <field name="fee" />
+=======
+                                        <field name="name" required="1"/>
+                                        <field name="from_weight" />
+                                        <field name="to_weight" />
+                                        <field name="progressive" />
+                                        <field name="progressive_level" />
+                                        <field name="fee" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page  name="surcharge_line" string="Phụ phí" attrs="{'invisible' : [('collection', '!=', True)]}">
+                                <field name="surcharge_ids">
+                                    <tree editable="bottom" default_order="price">
+                                        <field name="type_surcharge" required="1"/>
+                                        <field name="price" />
+                                        <field name="cpn" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                        <notebook>
+                            <page  name="fees_collection_line" string="Giá cước thu hộ" attrs="{'invisible' : [('collection', '!=', False)]}">
+                                <field name="fees_collection_ids">
+                                    <tree editable="bottom">
+                                        <field name="name" required="1"/>
+                                        <field name="from_weight" />
+                                        <field name="to_weight" />
+                                        <field name="fee_money" attrs="{'readonly': [('percentage_fee', '!=', 0)]}"/>
+                                        <field name="percentage_fee" attrs="{'readonly': [('fee_money', '!=', 0)]}"/>
+>>>>>>> 131a8e3bf586708491630fa78f85c10c67411111
                                     </tree>
                                 </field>
                             </page>
