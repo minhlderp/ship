@@ -13,8 +13,7 @@
                     <field name="fuel_fee"/>
                     <field name="region_fee"/>
                     <field name="year_apply" />
-                    <field name="over_weight" />
-                    <field name="over_weight_fee" />
+                    <field name="has_vat"/>
                 </tree>
             </field>
         </record>
