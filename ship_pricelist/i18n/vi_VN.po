@@ -120,17 +120,17 @@ msgstr "Phí"
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_fees_collection__percentage_fee
 msgid "Fee by %"
-msgstr ""
+msgstr "Cước theo %"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_fees_collection__fee_money
 msgid "Fee money"
-msgstr ""
+msgstr "Cước theo số tiền"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__fees_collection_ids
 msgid "Fees collection"
-msgstr ""
+msgstr "Bảng giá thu hộ"
 
 #. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist.py:0
