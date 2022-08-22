@@ -110,7 +110,7 @@
         </record>
 
         <menuitem name="Ship Pricelist" id="ship_pricelist_menu_id" parent="sale.menu_sale_config" action="ship_pricelist_action_id"/>
-        <menuitem name="Year apply" id="year_apply_menu_id" parent="sale.menu_sale_config" action="year_apply_action_id" groups="base.group_system"/>
+        <menuitem name="Year apply" id="year_apply_menu_id" parent="sale.menu_sale_config" action="year_apply_action_id" />
 
     </data>
 </odoo>
