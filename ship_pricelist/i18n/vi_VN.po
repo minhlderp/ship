@@ -6,8 +6,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 15.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-08-22 03:04+0000\n"
-"PO-Revision-Date: 2022-08-22 03:04+0000\n"
+"POT-Creation-Date: 2022-08-22 08:00+0000\n"
+"PO-Revision-Date: 2022-08-22 08:00+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -151,6 +151,11 @@ msgstr "Điểm đi"
 
 #. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist_line.py:0
+#, python-format
+msgid "From Weight"
+msgstr "Giá trị hàng từ"
+
+#. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist_line.py:0
 #, python-format
 msgid "From Weight (Gr)"
@@ -169,7 +174,7 @@ msgstr ""
 
 #. module: ship_pricelist
 #: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
-msgid "Giá trị hàng từ (Gr)"
+msgid "Giá trị hàng từ"
 msgstr ""
 
 #. module: ship_pricelist
@@ -221,11 +226,6 @@ msgstr "Ngày chỉnh sửa gần nhất"
 #, python-format
 msgid "Level"
 msgstr "Mức"
-
-#. module: ship_pricelist
-#: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
-msgid "Loại phí"
-msgstr ""
 
 #. module: ship_pricelist
 #: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
@@ -395,12 +395,8 @@ msgstr "Phụ phí"
 #: code:addons/ship_pricelist/models/ship_pricelist.py:0
 #, python-format
 msgid "Surcharge line '%s': Weight range cannot be overlapped"
-msgstr "Chi tiết giá cước thu hộ '%s': Khoảng trọng lượng không được phép trùng"
-
-#. module: ship_pricelist
-#: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
-msgid "Số tiền"
 msgstr ""
+"Chi tiết giá cước thu hộ '%s': Khoảng trọng lượng không được phép trùng"
 
 #. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist.py:0
@@ -410,6 +406,11 @@ msgstr "Điểm đến"
 
 #. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist_line.py:0
+#, python-format
+msgid "To Weight"
+msgstr "Đến"
+
+#. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist_line.py:0
 #, python-format
 msgid "To Weight (Gr)"
@@ -434,13 +435,17 @@ msgstr ""
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__has_vat
-#: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__number_vat
 msgid "VAT"
 msgstr ""
 
 #. module: ship_pricelist
 #: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
 msgid "VAT (%)"
+msgstr ""
+
+#. module: ship_pricelist
+#: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__number_vat
+msgid "VAT Number"
 msgstr ""
 
 #. module: ship_pricelist
@@ -470,6 +475,11 @@ msgstr ""
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__to_locations
 msgid "Điểm đến"
+msgstr ""
+
+#. module: ship_pricelist
+#: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
+msgid "Đến"
 msgstr ""
 
 #. module: ship_pricelist
