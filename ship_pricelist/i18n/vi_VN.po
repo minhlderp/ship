@@ -389,7 +389,7 @@ msgstr ""
 #: model:ir.model,name:ship_pricelist.model_surcharge
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__surcharge_ids
 msgid "Surcharge"
-msgstr ""
+msgstr "Phụ phí"
 
 #. module: ship_pricelist
 #: code:addons/ship_pricelist/models/ship_pricelist.py:0
