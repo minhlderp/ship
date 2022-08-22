@@ -1,5 +1,9 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
+<<<<<<< HEAD
+=======
+from datetime import datetime, date
+>>>>>>> 00c531fbbb44a410bac8f6429cf2d5442495ed8f
 
 class ShipPricelist(models.Model):
     _name = 'ship.pricelist'
@@ -16,8 +20,8 @@ class ShipPricelist(models.Model):
     over_weight_fee = fields.Float(string=_('Over Weight Fee'), digits='Product Unit of Measure')
     line_ids = fields.One2many('ship.pricelist.line', 'ship_pricelist_id', string=_('Pricelist Lines'))
     active = fields.Boolean(string=_('Active'), default=True)
-    has_vat = fields.Boolean('VAT')
-    number_vat = fields.Float('VAT')
+    has_vat = fields.Boolean(string='VAT')
+    number_vat = fields.Float(string='VAT Number')
     collection = fields.Boolean(related='service_type_id.price_list', string='Price list collection')
     surcharge_ids = fields.One2many('surcharge', 'ship_pricelist_id', string='Surcharge')
     fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection')
