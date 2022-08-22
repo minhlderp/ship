@@ -40,8 +40,8 @@ class FeesCollection(models.Model):
     _description = 'Fees for collection'
 
     name = fields.Char('Name')
-    from_weight = fields.Float(string=_('From Weight'), digits='Product Unit of Measure')
-    to_weight = fields.Float(string=_('To Weight'), digits='Product Unit of Measure')
+    from_weight = fields.Float(string=_('From value'), digits='Product Unit of Measure')
+    to_weight = fields.Float(string=_('To value'), digits='Product Unit of Measure')
     fee_money = fields.Integer('Fee money')
     percentage_fee = fields.Float('Fee by %')
     ship_pricelist_id = fields.Many2one('ship.pricelist')

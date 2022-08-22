@@ -81,8 +81,8 @@
                                 <field name="fees_collection_ids">
                                     <tree editable="bottom" default_order="from_weight">
                                         <field name="name" required="1" string="Mức"/>
-                                        <field name="from_weight" string="Giá trị hàng từ"/>
-                                        <field name="to_weight" string="Đến"/>
+                                        <field name="from_weight"/>
+                                        <field name="to_weight"/>
                                         <field name="fee_money" attrs="{'readonly': [('percentage_fee', '!=', 0)]}" string="Cước theo số tiền"/>
                                         <field name="percentage_fee" attrs="{'readonly': [('fee_money', '!=', 0)]}" string="Cước theo %"/>
                                     </tree>
