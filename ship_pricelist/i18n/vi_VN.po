@@ -307,7 +307,7 @@ msgstr ""
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_surcharge__price
 msgid "Price"
-msgstr ""
+msgstr "Số tiền"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__collection
@@ -424,7 +424,7 @@ msgstr ""
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_surcharge__type_surcharge
 msgid "Type surcharge"
-msgstr ""
+msgstr "Loại phụ phí"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_service_type__name
