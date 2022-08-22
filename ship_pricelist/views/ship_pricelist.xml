@@ -83,7 +83,7 @@
                                     <tree editable="bottom" default_order="fee_money">
                                         <field name="name" required="1" string="Mức"/>
                                         <field name="from_weight" string="Giá trị hàng từ (Gr)"/>
-                                        <field name="to_weight" string="Đến (Gr)"/>
+                                        <field name="to_weight" string="Đến"/>
                                         <field name="fee_money" attrs="{'readonly': [('percentage_fee', '!=', 0)]}" string="Cước theo số tiền"/>
                                         <field name="percentage_fee" attrs="{'readonly': [('fee_money', '!=', 0)]}" string="Cước theo %"/>
                                     </tree>
