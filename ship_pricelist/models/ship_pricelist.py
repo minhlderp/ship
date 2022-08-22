@@ -1,9 +1,8 @@
 from odoo import fields, models, api, _
 from odoo.exceptions import ValidationError
-<<<<<<< HEAD
-=======
+
 from datetime import datetime, date
->>>>>>> 00c531fbbb44a410bac8f6429cf2d5442495ed8f
+
 
 class ShipPricelist(models.Model):
     _name = 'ship.pricelist'

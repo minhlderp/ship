@@ -59,9 +59,7 @@
                                     <tree editable="bottom" default_order="from_weight">
                                         <field name="name" required="1"/>
                                         <field name="from_weight" />
-<<<<<<< HEAD
                                         <field name="to_weight" string="Đến (Gr)"/>
-=======
                                         <field name="to_weight"/>
                                         <field name="progressive" string="Lũy tiến"/>
                                         <field name="progressive_level" string="Mức tính lũy tiến(Gr)"/>
@@ -69,7 +67,6 @@
                                         <field name="name" required="1"/>
                                         <field name="from_weight" />
                                         <field name="to_weight" />
->>>>>>> 00c531fbbb44a410bac8f6429cf2d5442495ed8f
                                         <field name="progressive" />
                                         <field name="progressive_level" />
                                         <field name="fee" />
@@ -101,8 +98,6 @@
                                 </field>
                             </page>
                         </notebook>
-<<<<<<< HEAD
-=======
                         <notebook>
                             <page  name="surcharge_line" string="Phụ phí" attrs="{'invisible' : [('collection', '!=', True)]}">
                                 <field name="surcharge_ids">
@@ -127,7 +122,6 @@
                                 </field>
                             </page>
                         </notebook>
->>>>>>> 00c531fbbb44a410bac8f6429cf2d5442495ed8f
                     </sheet>
                 </form>
             </field>
