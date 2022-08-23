@@ -26,6 +26,13 @@ class ShipPricelist(models.Model):
     fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection', copy=True)
 
 
+    @api.returns('self', lambda value: value.id)
+    def copy(self, default=None):
+        self.ensure_one()
+        default = dict(default or {})
+        if 'name' not in default:
+            default['name'] = _("%s (copy)") % (self.name)
+        return super(ShipPricelist, self).copy(default=default)
     @api.constrains('line_ids')
     def validate_range_from_to_weight(self):
         error = []
