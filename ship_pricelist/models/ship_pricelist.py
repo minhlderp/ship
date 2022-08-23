@@ -17,7 +17,7 @@ class ShipPricelist(models.Model):
     year_apply = fields.Many2one('year.apply', string=_('Year apply'))
     over_weight = fields.Float(string=_('Over Weight (Gr)'), digits='Product Unit of Measure')
     over_weight_fee = fields.Float(string=_('Over Weight Fee'), digits='Product Unit of Measure')
-    line_ids = fields.One2many('ship.pricelist.line', 'ship_pricelist_id', string=_('Pricelist Lines'))
+    line_ids = fields.One2many('ship.pricelist.line', 'ship_pricelist_id', string=_('Pricelist Lines'), copy=True)
     active = fields.Boolean(string=_('Active'), default=True)
     has_vat = fields.Boolean(string='VAT')
     number_vat = fields.Float(string='VAT Number')
