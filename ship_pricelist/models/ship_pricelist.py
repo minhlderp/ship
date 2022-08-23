@@ -22,8 +22,8 @@ class ShipPricelist(models.Model):
     has_vat = fields.Boolean(string='VAT')
     number_vat = fields.Float(string='VAT Number')
     collection = fields.Boolean(related='service_type_id.price_list', string='Price list collection')
-    surcharge_ids = fields.One2many('surcharge', 'ship_pricelist_id', string='Surcharge')
-    fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection')
+    surcharge_ids = fields.One2many('surcharge', 'ship_pricelist_id', string='Surcharge', copy=True)
+    fees_collection_ids = fields.One2many('fees.collection', 'ship_pricelist_id', string='Fees collection', copy=True)
 
 
     @api.constrains('line_ids')
