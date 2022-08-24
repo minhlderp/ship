@@ -58,7 +58,7 @@
                                         <field name="name" required="1"/>
                                         <field name="from_weight" />
                                         <field name="to_weight" string="Đến (Gr)"/>
-                                        <field name="progressive" string="Lũy tiến"/>
+                                        <field name="progressive" string="Lũy tiến" widget="boolean_toggle"/>
                                         <field name="progressive_level" string="Mức tính lũy tiến(Gr)"/>
                                         <field name="fee" />
                                     </tree>
