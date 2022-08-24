@@ -13,7 +13,7 @@
                     <field name="fuel_fee"/>
                     <field name="region_fee"/>
                     <field name="year_apply" />
-                    <field name="has_vat"/>
+                    <field name="has_vat" widget="boolean_toggle"/>
                 </tree>
             </field>
         </record>
@@ -41,7 +41,7 @@
                                 <field name="year_apply" required="1"/>
                                 <field name="to_locations" widget="many2many_tags"/>
                                 <field name="collection" invisible="1"/>
-                                <field name="has_vat"/>
+                                <field name="has_vat" widget="boolean_toggle"/>
                                 <field name="number_vat" attrs="{'invisible' : [('has_vat', '!=', True)]}" string="VAT (%)"/>
                             </group>
                         </group>
@@ -71,7 +71,7 @@
                                     <tree editable="bottom" default_order="price">
                                         <field name="type_surcharge" required="1"/>
                                         <field name="price" />
-                                        <field name="cpn" />
+                                        <field name="cpn" widget="boolean_toggle"/>
                                     </tree>
                                 </field>
                             </page>

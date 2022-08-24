@@ -430,18 +430,18 @@ msgstr "Đến"
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist_line__from_weight
 msgid "Trọng lượng từ (Gr)"
-msgstr ""
+msgstr "Trọng lượng từ (Gr)"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_surcharge__type_surcharge
 msgid "Type surcharge"
-msgstr ""
+msgstr "Loại phí"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_service_type__name
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__name
 msgid "Tên"
-msgstr ""
+msgstr "Tên"
 
 #. module: ship_pricelist
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist__has_vat
@@ -487,4 +487,4 @@ msgstr ""
 #: model:ir.model.fields,field_description:ship_pricelist.field_ship_pricelist_line__to_weight
 #: model_terms:ir.ui.view,arch_db:ship_pricelist.ship_pricelist_view_form
 msgid "Đến (Gr)"
-msgstr ""
+msgstr "Đến (Gr)"
